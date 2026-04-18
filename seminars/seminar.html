@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>研究会 – 京都企業研究センター</title>
+  <link rel="stylesheet" href="../style.css">
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <style>
+    .seminar-body {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 2rem 2.5rem;
+      margin-top: 1.5rem;
+      max-width: 860px;
+    }
+
+    .seminar-body h1 { font-size: 1.5rem; color: #1a3a5c; margin-bottom: 1rem; }
+    .seminar-body h2 { font-size: 1.15rem; color: #1a3a5c; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid #dde; padding-bottom: 0.3rem; }
+    .seminar-body h3 { font-size: 1rem; margin: 1rem 0 0.3rem; }
+    .seminar-body p  { margin-bottom: 0.8rem; font-size: 0.95rem; }
+    .seminar-body ul, .seminar-body ol { padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.95rem; }
+    .seminar-body li { margin-bottom: 0.3rem; }
+    .seminar-body a  { color: #1a5c8a; text-decoration: underline; }
+    .seminar-body strong { font-weight: 600; }
+    .seminar-body hr { border: none; border-top: 1px solid #ddd; margin: 1.5rem 0; }
+
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      color: #1a5c8a;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .back-link:hover { text-decoration: underline; }
+
+    #error-msg { color: #c00; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>京都企業研究センター</h1>
+      <p class="subtitle">Kyoto Firm Research Center</p>
+    </div>
+  </header>
+
+  <main style="max-width:900px;margin:2rem auto;padding:0 1.5rem 3rem;">
+    <a class="back-link" href="../#seminars">← 研究会一覧に戻る</a>
+    <div id="content" class="seminar-body">読み込み中...</div>
+    <p id="error-msg" style="display:none"></p>
+  </main>
+
+  <footer>
+    <p>© 2024 京都企業研究センター / Kyoto Firm Research Center</p>
+  </footer>
+
+  <script>
+    async function loadMarkdown() {
+      const params = new URLSearchParams(location.search);
+      const file = params.get('file');
+
+      if (!file || !file.endsWith('.md') || file.includes('..')) {
+        showError('ファイルが指定されていません。');
+        return;
+      }
+
+      try {
+        const res = await fetch(file);
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        const text = await res.text();
+        const html = marked.parse(text);
+        document.getElementById('content').innerHTML = html;
+
+        // Set page title from first h1
+        const h1 = document.querySelector('#content h1');
+        if (h1) document.title = h1.textContent + ' – 京都企業研究センター';
+      } catch (e) {
+        showError('ファイルの読み込みに失敗しました。');
+      }
+    }
+
+    function showError(msg) {
+      document.getElementById('content').style.display = 'none';
+      const err = document.getElementById('error-msg');
+      err.textContent = msg;
+      err.style.display = 'block';
+    }
+
+    loadMarkdown();
+  </script>
+</body>
+</html>
