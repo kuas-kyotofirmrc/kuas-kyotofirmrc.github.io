@@ -36,9 +36,9 @@ async function loadSeminars() {
     }
 
     container.innerHTML = seminars.map(s => {
-      const link = s.type === 'notion'
-        ? `<a href="${s.url}" target="_blank" rel="noopener">告知ページを見る（Notion）↗</a>`
-        : `<a href="seminars/seminar.html?file=${s.id}.md">告知ページを見る</a>`;
+      const link = s.type === 'md'
+        ? `<a href="seminars/seminar.html?file=${s.id}.md">告知ページを見る</a>`
+        : `<a href="${s.url}" target="_blank" rel="noopener">告知ページを見る（${s.type}）↗</a>`;
 
       return `
         <div class="seminar-card">
