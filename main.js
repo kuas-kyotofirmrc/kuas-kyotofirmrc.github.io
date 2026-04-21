@@ -50,7 +50,7 @@ async function loadSeminars() {
         <div class="seminar-card">
           <h3>${s.title}</h3>
           <div class="seminar-meta">${s.date}</div>
-          ${s.description ? `<p style="font-size:0.9rem;color:#555;margin-bottom:0.6rem">${s.description}</p>` : ''}
+          ${s.description ? `<p style="font-size:0.95rem;color:#1a1a1a;margin-bottom:0.6rem">${s.description}</p>` : ''}
           <div class="seminar-links">${link}</div>
         </div>
       `;
