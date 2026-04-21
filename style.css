@@ -78,7 +78,7 @@ header h1 {
   background: none;
   border: none;
   padding: 1.1rem 2rem;
-  font-size: 0.88rem;
+  font-size: 1rem;
   font-family: "Noto Sans JP", sans-serif;
   font-weight: 400;
   letter-spacing: 0.1em;
@@ -116,7 +116,7 @@ main {
 
 .tab-content > h2 {
   font-family: "Noto Serif JP", serif;
-  font-size: 1.1rem;
+  font-size: 1.25rem;
   font-weight: 600;
   color: var(--green-deep);
   letter-spacing: 0.15em;
@@ -132,12 +132,12 @@ main {
 
 .year-section > h3 {
   font-family: "Noto Serif JP", serif;
-  font-size: 1rem;
+  font-size: 1.05rem;
   font-weight: 600;
   color: var(--white);
   background: var(--green-mid);
   display: inline-block;
-  padding: 0.25rem 1rem;
+  padding: 0.3rem 1.1rem;
   border-radius: 2px;
   letter-spacing: 0.12em;
   margin-bottom: 1.25rem;
@@ -145,18 +145,18 @@ main {
 
 .month-section {
   display: grid;
-  grid-template-columns: 3.5rem 1fr;
+  grid-template-columns: 4rem 1fr;
   gap: 0 1.5rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.4rem;
   align-items: start;
 }
 
 .month-section > h4 {
-  font-size: 0.78rem;
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--green-mid);
   letter-spacing: 0.08em;
-  padding-top: 0.3rem;
+  padding-top: 0.35rem;
   text-align: right;
   white-space: nowrap;
 }
@@ -168,9 +168,9 @@ main {
 }
 
 .month-section ul li {
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 300;
-  padding: 0.3rem 0;
+  padding: 0.35rem 0;
   color: var(--text-primary);
   position: relative;
 }
@@ -200,7 +200,7 @@ main {
 
 /* ── Seminars ── */
 .seminars-intro {
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: var(--text-muted);
   margin-bottom: 2rem;
 }
@@ -226,29 +226,29 @@ main {
 
 .seminar-card h3 {
   font-family: "Noto Serif JP", serif;
-  font-size: 0.98rem;
+  font-size: 1.1rem;
   font-weight: 600;
   color: var(--green-deep);
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.35rem;
   letter-spacing: 0.05em;
 }
 
 .seminar-card .seminar-meta {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   color: var(--text-muted);
   letter-spacing: 0.05em;
   margin-bottom: 0.6rem;
 }
 
 .seminar-card p {
-  font-size: 0.87rem;
+  font-size: 0.98rem;
   color: #444;
   margin-bottom: 0.75rem;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
 .seminar-card .seminar-links a {
-  font-size: 0.82rem;
+  font-size: 0.93rem;
   color: var(--green-mid);
   text-decoration: none;
   border-bottom: 1px solid var(--green-pale);
