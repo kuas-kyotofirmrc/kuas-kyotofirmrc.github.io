@@ -4,31 +4,31 @@
     "title": "第4回研究会",
     "date": "2026年1月16日",
     "description": "本研究センター所属の先生方による講演・ディスカッション。京都先端科学大学経済経営学部論集「小特集 京都企業研究」掲載論考に基づく発表。",
-    "type": "notion",
-    "url": "https://kuas-kyotofirm-rc.notion.site/4-2b0ac3c2ed7480928604ec0025b0a734"
+    "announcement": { "type": "notion", "url": "https://kuas-kyotofirm-rc.notion.site/4-2b0ac3c2ed7480928604ec0025b0a734" },
+    "report": { "url": "https://www.kuas.ac.jp/news/42977/" }
   },
   {
     "id": "seminar-03",
     "title": "第3回研究会",
     "date": "2025年2月28日",
     "description": "",
-    "type": "notion",
-    "url": "https://kuas-kyotofirm-rc.notion.site/3-17bac3c2ed7480938387e889b971550f"
+    "announcement": { "type": "notion", "url": "https://kuas-kyotofirm-rc.notion.site/3-17bac3c2ed7480938387e889b971550f" },
+    "report": { "url": "https://www.kuas.ac.jp/news/30843/" }
   },
   {
     "id": "seminar-02",
     "title": "第2回研究会",
     "date": "2024年11月29日",
     "description": "",
-    "type": "KUAS ウェブサイト",
-    "url": "https://www.kuas.ac.jp/news/4141/"
+    "announcement": { "type": "KUAS ウェブサイト", "url": "https://www.kuas.ac.jp/news/4141/" },
+    "report": { "url": "https://www.kuas.ac.jp/news/4101/" }
   },
   {
     "id": "seminar-kickoff",
     "title": "キックオフ研究会",
     "date": "2024年6月7日",
     "description": "",
-    "type": "KUAS ウェブサイト",
-    "url": "https://www.kuas.ac.jp/news/4232/"
+    "announcement": { "type": "KUAS ウェブサイト", "url": "https://www.kuas.ac.jp/news/4232/" },
+    "report": { "url": "https://www.kuas.ac.jp/news/4194/" }
   }
 ]

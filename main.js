@@ -36,9 +36,15 @@ async function loadSeminars() {
     }
 
     container.innerHTML = seminars.map(s => {
-      const link = s.type === 'md'
-        ? `<a href="seminars/seminar.html?file=${s.id}.md">告知ページを見る</a>`
-        : `<a href="${s.url}" target="_blank" rel="noopener">告知ページを見る（${s.type}）↗</a>`;
+      const announcementLink = s.announcement
+        ? (s.announcement.type === 'md'
+            ? `<a href="seminars/seminar.html?file=${s.id}.md">告知</a>`
+            : `<a href="${s.announcement.url}" target="_blank" rel="noopener">告知（${s.announcement.type}）↗</a>`)
+        : '';
+      const reportLink = s.report
+        ? `<a href="${s.report.url}" target="_blank" rel="noopener">開催レポート↗</a>`
+        : '';
+      const link = [announcementLink, reportLink].filter(Boolean).join('');
 
       return `
         <div class="seminar-card">
