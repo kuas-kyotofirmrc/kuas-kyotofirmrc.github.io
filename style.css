@@ -20,7 +20,7 @@
 
 body {
   font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   background: var(--green-bg);
   color: var(--text-primary);
   line-height: 1.9;
@@ -169,7 +169,7 @@ main {
 
 .month-section ul li {
   font-size: 1rem;
-  font-weight: 300;
+  font-weight: 400;
   padding: 0.35rem 0;
   color: var(--text-primary);
   position: relative;
@@ -242,7 +242,7 @@ main {
 
 .seminar-card p {
   font-size: 0.98rem;
-  color: #444;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
   line-height: 1.8;
 }
