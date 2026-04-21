@@ -1,3 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@400;600&family=Noto+Sans+JP:wght@300;400;500&display=swap');
+
+:root {
+  --green-deep:   #1e4d35;
+  --green-mid:    #2d6a4f;
+  --green-light:  #52b788;
+  --green-pale:   #d8f3dc;
+  --green-bg:     #f2f7f4;
+  --text-primary: #1a1a1a;
+  --text-muted:   #6b7b72;
+  --border:       #d0e4d8;
+  --white:        #ffffff;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -5,97 +19,91 @@
 }
 
 body {
-  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Meiryo", sans-serif;
-  background: #f8f8f6;
-  color: #2c2c2c;
-  line-height: 1.8;
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  font-weight: 300;
+  background: var(--green-bg);
+  color: var(--text-primary);
+  line-height: 1.9;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* Header */
+/* ── Header ── */
 header {
-  background: #1a3a5c;
-  color: #fff;
-  padding: 2rem 1.5rem;
+  background: var(--green-deep);
+  color: var(--white);
+  padding: 3rem 2rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--green-light), transparent);
 }
 
 .header-inner {
-  max-width: 900px;
+  max-width: 920px;
   margin: 0 auto;
 }
 
 header h1 {
-  font-size: 1.8rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.75rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
 }
 
 .subtitle {
-  font-size: 0.95rem;
-  opacity: 0.8;
-  margin-top: 0.3rem;
-  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 300;
+  letter-spacing: 0.22em;
+  color: var(--green-pale);
+  margin-top: 0.5rem;
+  text-transform: uppercase;
 }
 
-/* Tab Nav */
+/* ── Tab Nav ── */
 .tab-nav {
-  background: #fff;
-  border-bottom: 2px solid #e0e0d8;
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
   display: flex;
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 calc((100% - 920px) / 2);
 }
 
 .tab-btn {
   background: none;
   border: none;
-  padding: 1rem 1.5rem;
-  font-size: 1rem;
+  padding: 1.1rem 2rem;
+  font-size: 0.88rem;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
   cursor: pointer;
-  color: #666;
-  border-bottom: 3px solid transparent;
-  margin-bottom: -2px;
-  font-family: inherit;
-  transition: color 0.2s;
+  color: var(--text-muted);
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .tab-btn:hover {
-  color: #1a3a5c;
+  color: var(--green-mid);
 }
 
 .tab-btn.active {
-  color: #1a3a5c;
-  border-bottom-color: #1a3a5c;
-  font-weight: 600;
+  color: var(--green-deep);
+  border-bottom-color: var(--green-light);
+  font-weight: 500;
 }
 
-/* Tab Nav: full width bar behind the buttons */
-nav.tab-nav {
-  max-width: 100%;
-  border-bottom: 2px solid #e0e0d8;
-  background: #fff;
-  padding: 0;
-}
-
-nav.tab-nav > * {
-  max-width: 900px;
-  margin: 0 auto;
-  display: flex;
-  padding: 0 1.5rem;
-}
-
-/* Override: make nav itself the flex container */
-nav.tab-nav {
-  display: flex;
-  justify-content: flex-start;
-  padding: 0 calc((100% - 900px) / 2);
-}
-
-/* Main */
+/* ── Main ── */
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1.5rem 3rem;
+  max-width: 920px;
+  margin: 0 auto;
+  padding: 2.5rem 2rem 5rem;
 }
 
 .tab-content {
@@ -107,140 +115,172 @@ main {
 }
 
 .tab-content > h2 {
-  font-size: 1.4rem;
-  color: #1a3a5c;
-  border-left: 4px solid #1a3a5c;
-  padding-left: 0.75rem;
-  margin-bottom: 1.5rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  letter-spacing: 0.15em;
+  margin-bottom: 2rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
 }
 
-/* Year / Month sections */
+/* ── Year / Month ── */
 .year-section {
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
 }
 
 .year-section > h3 {
-  font-size: 1.15rem;
-  color: #1a3a5c;
-  background: #e8eef4;
-  padding: 0.4rem 0.8rem;
-  border-radius: 4px;
-  margin-bottom: 1rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--white);
+  background: var(--green-mid);
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  border-radius: 2px;
+  letter-spacing: 0.12em;
+  margin-bottom: 1.25rem;
 }
 
 .month-section {
-  margin-bottom: 1.2rem;
-  padding-left: 0.5rem;
+  display: grid;
+  grid-template-columns: 3.5rem 1fr;
+  gap: 0 1.5rem;
+  margin-bottom: 1.25rem;
+  align-items: start;
 }
 
 .month-section > h4 {
-  font-size: 0.95rem;
-  color: #555;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
-  padding-left: 0.5rem;
-  border-left: 2px solid #b0c4d8;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--green-mid);
+  letter-spacing: 0.08em;
+  padding-top: 0.3rem;
+  text-align: right;
+  white-space: nowrap;
 }
 
-.month-section ul {
+.month-section > ul {
   list-style: none;
-  padding-left: 1rem;
+  border-left: 1px solid var(--border);
+  padding-left: 1.25rem;
 }
 
 .month-section ul li {
-  padding: 0.25rem 0;
-  padding-left: 1em;
+  font-size: 0.9rem;
+  font-weight: 300;
+  padding: 0.3rem 0;
+  color: var(--text-primary);
   position: relative;
-  font-size: 0.95rem;
 }
 
 .month-section ul li::before {
-  content: "–";
+  content: '';
   position: absolute;
-  left: 0;
-  color: #888;
+  left: -1.32rem;
+  top: 0.75rem;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--green-light);
 }
 
 .month-section ul li a {
-  color: #1a5c8a;
-  text-decoration: underline;
+  color: var(--green-mid);
+  text-decoration: none;
+  border-bottom: 1px solid var(--green-pale);
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .month-section ul li a:hover {
-  color: #0d3a5c;
+  color: var(--green-deep);
+  border-bottom-color: var(--green-light);
 }
 
-/* Seminars */
+/* ── Seminars ── */
 .seminars-intro {
-  margin-bottom: 1.5rem;
-  color: #555;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 2rem;
 }
 
 .seminars-list {
   display: grid;
-  gap: 1rem;
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .seminar-card {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 1.2rem 1.5rem;
-  transition: box-shadow 0.2s;
+  background: var(--white);
+  padding: 1.5rem 1.75rem;
+  transition: background 0.15s;
 }
 
 .seminar-card:hover {
-  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  background: #f8fbf9;
 }
 
 .seminar-card h3 {
-  font-size: 1rem;
-  color: #1a3a5c;
-  margin-bottom: 0.4rem;
+  font-family: "Noto Serif JP", serif;
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--green-deep);
+  margin-bottom: 0.3rem;
+  letter-spacing: 0.05em;
 }
 
 .seminar-card .seminar-meta {
-  font-size: 0.85rem;
-  color: #777;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
   margin-bottom: 0.6rem;
 }
 
-.seminar-card .seminar-links {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
+.seminar-card p {
+  font-size: 0.87rem;
+  color: #444;
+  margin-bottom: 0.75rem;
+  line-height: 1.7;
 }
 
 .seminar-card .seminar-links a {
-  font-size: 0.88rem;
-  color: #1a5c8a;
-  text-decoration: underline;
+  font-size: 0.82rem;
+  color: var(--green-mid);
+  text-decoration: none;
+  border-bottom: 1px solid var(--green-pale);
+  letter-spacing: 0.03em;
+  transition: border-color 0.15s, color 0.15s;
 }
 
 .seminar-card .seminar-links a:hover {
-  color: #0d3a5c;
+  color: var(--green-deep);
+  border-bottom-color: var(--green-light);
 }
 
-/* Footer */
+/* ── Footer ── */
 footer {
+  background: var(--green-deep);
+  color: rgba(255,255,255,0.45);
   text-align: center;
-  padding: 1.5rem;
-  font-size: 0.82rem;
-  color: #999;
-  border-top: 1px solid #e0e0d8;
-  background: #fff;
+  padding: 1.75rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
 }
 
-@media (max-width: 600px) {
-  header h1 {
-    font-size: 1.3rem;
-  }
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  header { padding: 2rem 1.25rem 1.75rem; }
+  header h1 { font-size: 1.3rem; }
+  .tab-nav { padding: 0 0.5rem; }
+  .tab-btn { padding: 1rem 1.25rem; font-size: 0.85rem; }
+  main { padding: 2rem 1.25rem 4rem; }
 
-  nav.tab-nav {
-    padding: 0 0.5rem;
-  }
-
-  main {
-    padding: 0 1rem 2rem;
+  .month-section {
+    grid-template-columns: 2.5rem 1fr;
+    gap: 0 1rem;
   }
 }

@@ -9,33 +9,42 @@
   <style>
     .seminar-body {
       background: #fff;
-      border: 1px solid #ddd;
+      border: 1px solid var(--border, #d0e4d8);
       border-radius: 6px;
-      padding: 2rem 2.5rem;
+      padding: 2.5rem 3rem;
       margin-top: 1.5rem;
-      max-width: 860px;
     }
 
-    .seminar-body h1 { font-size: 1.5rem; color: #1a3a5c; margin-bottom: 1rem; }
-    .seminar-body h2 { font-size: 1.15rem; color: #1a3a5c; margin: 1.5rem 0 0.5rem; border-bottom: 1px solid #dde; padding-bottom: 0.3rem; }
-    .seminar-body h3 { font-size: 1rem; margin: 1rem 0 0.3rem; }
-    .seminar-body p  { margin-bottom: 0.8rem; font-size: 0.95rem; }
-    .seminar-body ul, .seminar-body ol { padding-left: 1.5rem; margin-bottom: 0.8rem; font-size: 0.95rem; }
-    .seminar-body li { margin-bottom: 0.3rem; }
-    .seminar-body a  { color: #1a5c8a; text-decoration: underline; }
-    .seminar-body strong { font-weight: 600; }
-    .seminar-body hr { border: none; border-top: 1px solid #ddd; margin: 1.5rem 0; }
+    .seminar-body h1 { font-family: "Noto Serif JP", serif; font-size: 1.4rem; color: #1e4d35; margin-bottom: 1.25rem; letter-spacing: 0.06em; line-height: 1.5; }
+    .seminar-body h2 { font-family: "Noto Serif JP", serif; font-size: 1rem; color: #1e4d35; margin: 2rem 0 0.6rem; padding-bottom: 0.4rem; border-bottom: 1px solid #d0e4d8; letter-spacing: 0.08em; }
+    .seminar-body h3 { font-size: 0.95rem; font-weight: 500; margin: 1rem 0 0.3rem; color: #2d6a4f; }
+    .seminar-body p  { margin-bottom: 0.9rem; font-size: 0.9rem; font-weight: 300; }
+    .seminar-body ul, .seminar-body ol { padding-left: 1.5rem; margin-bottom: 0.9rem; font-size: 0.9rem; font-weight: 300; }
+    .seminar-body li { margin-bottom: 0.4rem; }
+    .seminar-body a  { color: #2d6a4f; text-decoration: none; border-bottom: 1px solid #d8f3dc; transition: border-color 0.15s; }
+    .seminar-body a:hover { border-bottom-color: #52b788; }
+    .seminar-body strong { font-weight: 500; }
+    .seminar-body hr { border: none; border-top: 1px solid #d0e4d8; margin: 2rem 0; }
 
     .back-link {
-      display: inline-block;
-      margin-bottom: 1rem;
-      color: #1a5c8a;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+      color: #2d6a4f;
       text-decoration: none;
-      font-size: 0.9rem;
+      font-size: 0.83rem;
+      letter-spacing: 0.05em;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s;
     }
-    .back-link:hover { text-decoration: underline; }
+    .back-link:hover { border-bottom-color: #52b788; }
 
-    #error-msg { color: #c00; margin-top: 1rem; }
+    #error-msg { color: #c00; margin-top: 1rem; font-size: 0.9rem; }
+
+    @media (max-width: 640px) {
+      .seminar-body { padding: 1.5rem 1.25rem; }
+    }
   </style>
 </head>
 <body>
