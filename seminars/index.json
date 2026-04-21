@@ -19,15 +19,15 @@
     "id": "seminar-02",
     "title": "第2回研究会",
     "date": "2024年11月29日",
-    "description": "",
+    "description": "「京都の企業家エコシステム」をテーマに、起業家・企業・行政関係者とセンター所属教員によるパネルディスカッション・座談会を開催。",
     "announcement": { "type": "KUAS ウェブサイト", "url": "https://www.kuas.ac.jp/news/4141/" },
     "report": { "url": "https://www.kuas.ac.jp/news/4101/" }
   },
   {
     "id": "seminar-kickoff",
-    "title": "キックオフ研究会",
+    "title": "第1回研究会（キックオフ）",
     "date": "2024年6月7日",
-    "description": "",
+    "description": "徳賀芳弘教授による基調講演「京都企業：長寿と成長のモデル」と、産官学メンバーによるパネルディスカッション「京都企業研究センターが目指すもの・期待すること」を開催。",
     "announcement": { "type": "KUAS ウェブサイト", "url": "https://www.kuas.ac.jp/news/4232/" },
     "report": { "url": "https://www.kuas.ac.jp/news/4194/" }
   }
