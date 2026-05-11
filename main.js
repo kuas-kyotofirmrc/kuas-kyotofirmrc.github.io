@@ -36,12 +36,12 @@ async function loadSeminars() {
     }
 
     container.innerHTML = seminars.map(s => {
-      const announcementLink = s.announcement
+      const announcementLink = s.announcement && s.announcement.url !== undefined
         ? (s.announcement.type === 'md'
-            ? `<a href="seminars/seminar.html?file=${s.id}.md">告知</a>`
-            : `<a href="${s.announcement.url}" target="_blank" rel="noopener">告知（${s.announcement.type}）↗</a>`)
+            ? `<a href="seminars/seminar.html?file=${s.id}.md">告知↗</a>`
+            : `<a href="${s.announcement.url}" target="_blank" rel="noopener">告知↗</a>`)
         : '';
-      const reportLink = s.report
+      const reportLink = s.report && s.report.url
         ? `<a href="${s.report.url}" target="_blank" rel="noopener">開催レポート↗</a>`
         : '';
       const link = [announcementLink, reportLink].filter(Boolean).join('');

@@ -247,6 +247,11 @@ main {
   line-height: 1.8;
 }
 
+.seminar-card .seminar-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
 .seminar-card .seminar-links a {
   font-size: 0.93rem;
   color: var(--green-mid);
