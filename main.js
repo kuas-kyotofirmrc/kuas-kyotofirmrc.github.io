@@ -44,7 +44,7 @@ async function loadSeminars() {
       const reportLink = s.report && s.report.url
         ? `<a href="${s.report.url}" target="_blank" rel="noopener">開催レポート↗</a>`
         : '';
-      const link = [announcementLink, reportLink].filter(Boolean).join('');
+      const link = [announcementLink, reportLink].filter(Boolean).join('<span style="display:inline-block;width:1.5rem"></span>');
 
       return `
         <div class="seminar-card">
