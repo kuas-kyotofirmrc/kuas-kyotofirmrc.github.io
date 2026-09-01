@@ -47,6 +47,35 @@ header::after {
 .header-inner {
   max-width: 920px;
   margin: 0 auto;
+  position: relative;
+}
+
+.lang-switch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+}
+
+.lang-switch a {
+  color: var(--green-pale);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+
+.lang-switch a:hover {
+  color: var(--white);
+  border-bottom-color: var(--white);
+}
+
+.lang-switch span {
+  color: rgba(255,255,255,0.4);
+  margin: 0 0.4em;
+}
+
+.lang-switch .current {
+  color: var(--white);
 }
 
 header h1 {
@@ -280,6 +309,7 @@ footer {
 @media (max-width: 640px) {
   header { padding: 2rem 1.25rem 1.75rem; }
   header h1 { font-size: 1.3rem; }
+  .lang-switch { position: static; display: block; margin-top: 0.75rem; }
   .tab-nav { padding: 0 0.5rem; }
   .tab-btn { padding: 1rem 1.25rem; font-size: 0.85rem; }
   main { padding: 2rem 1.25rem 4rem; }
