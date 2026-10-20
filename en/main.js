@@ -26,7 +26,7 @@ async function loadSeminars() {
   if (!container) return;
 
   try {
-    const res = await fetch('../seminars/index.json');
+    const res = await fetch('../seminars/index.json', { cache: 'no-cache' });
     if (!res.ok) throw new Error('not found');
     const seminars = await res.json();
 
